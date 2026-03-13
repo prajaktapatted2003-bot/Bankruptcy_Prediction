@@ -1,24 +1,24 @@
-# **Bankruptcy Prediction using Machine Learning**
-
-1. ##### **Project Overview**
-
-
-
-Financial bankruptcy prediction is a **critical problem in business risk management.**
-
-Organizations, investors, and financial institutions need reliable systems to **identify companies with high bankruptcy risk** before financial collapse occurs.
+HEAD
+Bankruptcy Prediction using Machine Learning
+1.Project Overview
 
 
 
-This project builds a **Machine Learning–based bankruptcy prediction system** that analyzes financial risk factors and predicts whether a company is likely to **go bankrupt or remain financially stable.**
+Financial bankruptcy prediction is a critical problem in business risk management.
+
+Organizations, investors, and financial institutions need reliable systems to identify companies with high bankruptcy risk before financial collapse occurs.
 
 
 
-The system uses multiple ML models, performs **data preprocessing, feature selection, model comparison, and evaluation**, and identifies the **best-performing algorithm for deployment.**
+This project builds a Machine Learning–based bankruptcy prediction system that analyzes financial risk factors and predicts whether a company is likely to go bankrupt or remain financially stable.
 
 
 
-##### **2) Business Objective**
+The system uses multiple ML models, performs data preprocessing, feature selection, model comparison, and evaluation, and identifies the best-performing algorithm for deployment.
+
+
+
+2) Business Objective
 
 
 
@@ -26,14 +26,14 @@ This is a binary classification problem.
 
 
 
-###### **Goal:**
+Goal:
 
-**Predict whether a company will be:**
+Predict whether a company will be:
 
 
 
-* 0 → Non-Bankrupt
-* 1 → Bankrupt
+ 0 → Non-Bankrupt
+ 1 → Bankrupt
 
 
 
@@ -45,13 +45,13 @@ Dataset Information
 
 
 
-* **Total Companies:** 250
-* **Total Features:** 7 financial risk indicators
-* **Target Variable:** Bankruptcy status
+* Total Companies: 250
+* Total Features: 7 financial risk indicators
+* Target Variable: Bankruptcy status
 
 
 
-##### **3)Exploratory Data Analysis (EDA)**
+3)Exploratory Data Analysis (EDA)
 
 
 
@@ -59,7 +59,7 @@ Exploratory Data Analysis was performed to understand patterns, distributions, a
 
 
 
-###### **(1)Class Distribution**
+(1)Class Distribution
 
 
 
@@ -67,19 +67,19 @@ Bar chart analysis showed:
 
 
 
-Majority companies are **non-bankrupt**
+Majority companies are non-bankrupt
 
 
 
-Smaller portion represent **bankrupt firms**
+Smaller portion represent bankrupt firms
 
 
 
-This indicates a **slight class imbalance** in the dataset.
+This indicates a slight class imbalance in the dataset.
 
 
 
-###### **(2) Correlation Heatmap**
+(2) Correlation Heatmap**
 
 
 
@@ -91,13 +91,13 @@ Key observations:
 
 
 
-* **Financial Flexibility**
-* **Credibility**
-* **Competitiveness**
+* Financial Flexibility
+* Credibility
+* Competitiveness
 
 
 
-These features show **strong positive correlations**, indicating their importance in predicting financial stability.
+These features show strong positive correlations, indicating their importance in predicting financial stability.
 
 
 
@@ -105,8 +105,8 @@ Meanwhile:
 
 
 
-* **Industrial Risk**
-* **Management Risk**
+* Industrial Risk
+* Management Risk
 
 
 
@@ -114,8 +114,7 @@ show weaker correlations with bankruptcy outcomes.
 
 
 
-###### **(3)  Boxplot Analysis**
-
+(3)  Boxplot Analysis
 
 
 Boxplots highlight how financial indicators vary between bankrupt and non-bankrupt companies.
@@ -126,11 +125,11 @@ Key insight:
 
 
 
-Companies with **low credibility and poor financial flexibility** show significantly higher bankruptcy probability.
+Companies with low credibility and poor financial flexibility show significantly higher bankruptcy probability.
 
 
 
-###### **4) Data Preprocessing**
+4) Data Preprocessing
 
 
 
@@ -138,7 +137,7 @@ To ensure accurate model training, the dataset underwent several preprocessing s
 
 
 
-###### **Data Cleaning**
+Data Cleaning
 
 
 
@@ -154,7 +153,7 @@ Checked for missing or invalid values
 
 
 
-###### **Encoding**
+Encoding
 
 
 
@@ -168,15 +167,15 @@ Categorical labels converted to numeric format:
 
 
 
-###### **Feature Scaling**
+Feature Scaling
 
 
 
-Used **StandardScaler** to normalize features so that all variables contribute equally during model training.
+Used StandardScaler to normalize features so that all variables contribute equally during model training.
 
 
 
-###### **Train-Test Split**
+Train-Test Split
 
 
 
@@ -184,9 +183,9 @@ Dataset divided into:
 
 
 
-Training Data: **80%**
+Training Data: 80%
 
-Testing Data: **20%**
+Testing Data: 20%
 
 
 
@@ -196,7 +195,7 @@ This ensures reliable evaluation on unseen data.
 
 
 
-##### **5) Feature Selection**
+5) Feature Selection
 
 
 
@@ -208,13 +207,13 @@ Methods used:
 
 
 
-* **Logistic Regression (L1 regularization)**
-* **SelectKBest statistical method**
-* **Correlation heatmap analysis**
+* Logistic Regression (L1 regularization)
+* SelectKBest statistical method
+* Correlation heatmap analysis
 
 
 
-This helped identify the **most influential predictors of bankruptcy risk.**
+This helped identify the most influential predictors of bankruptcy risk.
 
 
 
@@ -222,7 +221,7 @@ Only statistically significant features were retained for model training.
 
 
 
-##### **6) Machine Learning Models Implemented**
+6) Machine Learning Models Implemented
 
 
 
@@ -230,7 +229,7 @@ The project implemented and compared five different machine learning models.
 
 
 
-**Model	                       Description**
+Model	                       Description
 
 Logistic Regression	       Linear classification model
 
@@ -242,17 +241,16 @@ Random Forest	               Ensemble learning model
 
 XGBoost	                       Gradient boosting algorithm
 
-##### 
 
-##### **7) Training Approach**
-
-
-
-Models trained using Scikit-learn and **XGBoost**
+7) Training Approach
 
 
 
-Hyperparameter tuning using **GridSearchCV**
+Models trained using Scikit-learn and XGBoost
+
+
+
+Hyperparameter tuning using GridSearchCV
 
 
 
@@ -274,7 +272,7 @@ Model Evaluation Metrics
 
 
 
-|      **Model**|      **Accuracy**	       |       **F1-Score**	      |      **Precision**|      **Recall**|         **ROC-AUC**|         **Comment**|
+|      Model|      Accuracy	       |       F1-Score	      |      Precision|      Recall|         ROC-AUC|         Comment|
 |-|-|-|-|-|-|-|
 |Logistic Regression|       0.76|        0.86|      1.00|        1.00|         0.30|   Weak performance<br /> |
 |Random Forest|       1.00|         1.00 |      1.00|        1.00|         1.00| Excellent \& stable|
@@ -286,9 +284,9 @@ Model Evaluation Metrics
 
 
 
-###### **Observations**
+Observations
 
-###### 1️⃣ **Logistic Regression**
+ 1️⃣ Logistic Regression
 
 
 
@@ -308,7 +306,7 @@ Model Evaluation Metrics
 
 
 
-###### 2️⃣ **Random Forest**
+ 2️⃣ Random Forest
 
 
 
@@ -328,7 +326,7 @@ Model Evaluation Metrics
 
 
 
-###### 3️⃣ **Decision Tree**
+ 3️⃣ Decision Tree
 
 
 
@@ -342,11 +340,11 @@ Model Evaluation Metrics
 
 * Less stable compared to ensemble models.
 
-###### 
 
-###### 4️⃣ **K-Nearest Neighbors (KNN)**
 
-###### 
+ 4️⃣ K-Nearest Neighbors (KNN)
+
+
 
 * Delivered excellent evaluation metrics.
 
@@ -360,7 +358,7 @@ Model Evaluation Metrics
 
 
 
-###### 5️⃣ **XGBoost**
+5️⃣ XGBoost
 
 
 
@@ -380,11 +378,11 @@ Model Evaluation Metrics
 
 
 
-##### **9)Final Model Selection**
+9)Final Model Selection
 
 
 
-**After evaluating all models:**
+After evaluating all models:
 
 
 
@@ -392,7 +390,7 @@ Random Forest was selected as the final model for deployment.
 
 
 
-**Reasons:**
+Reasons:
 
 
 
@@ -403,7 +401,7 @@ Random Forest was selected as the final model for deployment.
 
 
 
-##### **10)Project Structure**
+10)Project Structure
 
 bankruptcy-prediction-ml
 
@@ -453,11 +451,11 @@ bankruptcy-prediction-ml
 
 
 
-##### **11) Project Demo**
+11) Project Demo
 
-**Model Used**: Random Forest Classifier
+Model Used: Random Forest Classifier
 
-**Accuracy Achieved:** 100%
+Accuracy Achieved: 100%
 
 
 
@@ -465,7 +463,7 @@ The trained Random Forest model is deployed using a simple interface where users
 
 
 
-**Users select values for the following financial indicators:**
+Users select values for the following financial indicators:
 
 
 
@@ -478,11 +476,11 @@ The trained Random Forest model is deployed using a simple interface where users
 
 
 
-After clicking **Predict Bankruptcy**, the model analyzes the input features and returns the prediction result.
+After clicking Predict Bankruptcy, the model analyzes the input features and returns the prediction result.
 
 
 
-**Example Prediction Interface:**
+Example Prediction Interface:
 
 * Example Prediction Result – Non-Bankrupt Company
 * Example Prediction Result – Bankrupt Company
@@ -493,11 +491,11 @@ This demo shows how the machine learning model can assist analysts and financial
 
 
 
-##### **12) Tech Stack**
+12) Tech Stack
 
 
 
-|                                     **Category**|                                           **Tools** |
+|                                     Category|                                           Tools |
 |-|-|
 |                                   Programming|                                             Python|
 |                                   Data Analysis|                                           Pandas, NumPy|
@@ -508,11 +506,11 @@ This demo shows how the machine learning model can assist analysts and financial
 
 
 
-##### **13) Installation**
+13) Installation
 
 
 
-**Clone the repository:**
+Clone the repository:
 
 
 
@@ -520,7 +518,7 @@ git clone https://github.com/yourusername/bankruptcy-prediction-ml.git
 
 
 
-**Install dependencies:**
+Install dependencies:
 
 
 
@@ -531,7 +529,7 @@ git clone https://github.com/yourusername/bankruptcy-prediction-ml.git
 
 
 
-##### **14) Future Improvements**
+14) Future Improvements
 
 
 
@@ -543,7 +541,7 @@ git clone https://github.com/yourusername/bankruptcy-prediction-ml.git
 
 
 
-##### **15)Key Learning Outcomes**
+15)Key Learning Outcomes
 
 
 
@@ -560,7 +558,7 @@ git clone https://github.com/yourusername/bankruptcy-prediction-ml.git
 
 
 
-##### **Author**
+Author
 
 
 
@@ -570,5 +568,8 @@ Information Science Engineer
 
 
 
-Skills: **Machine Learning | Data Science | Python | Data Analysis**
+Skills: Machine Learning | Data Science | Python | Data Analysis
 
+
+# Bankruptcy_Prediction
+ 4d79255adafd67d2c6f9b7d9194fcf6467a4d13c
