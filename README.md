@@ -2,15 +2,13 @@
 Bankruptcy Prediction using Machine Learning
 
 
-1.Project Overview
+1) Project Overview
 Financial bankruptcy prediction is a critical problem in business risk management.
 Organizations, investors, and financial institutions need reliable systems to identify companies with high bankruptcy risk before financial collapse occurs.
 
 This project builds a Machine Learning–based bankruptcy prediction system that analyzes financial risk factors and predicts whether a company is likely to go bankrupt or remain financially stable.
 
 The system uses multiple ML models, performs data preprocessing, feature selection, model comparison, and evaluation, and identifies the best-performing algorithm for deployment.
-
-
 
 2) Business Objective
 
@@ -162,48 +160,29 @@ Reasons:
 bankruptcy-prediction-ml
 
 │
-
 ├── data
-
 │   └── bankruptcy\_dataset.xlsx
-
 │
-
 ├── notebooks
-
 │   └── Bankruptcy\_Prediction\_Model.ipynb
-
 │
-
 ├── src
-
 │   ├── data\_preprocessing.py
-
 │   ├── model\_training.py
-
 │   └── prediction.py
-
 │
-
 ├── models
-
 │   └── trained\_model.pkl
-
 │
-
 ├── images
-
 │   └── project\_demo.png
-
 │
-
 ├── requirements.txt
-
 ├── README.md
-
 └── app.py
 
 11) Project Demo
+    
 Model Used: Random Forest Classifier
 Accuracy Achieved: 100%
 The trained Random Forest model is deployed using a simple interface where users can enter financial risk indicators to predict whether a company is **Bankrupt or Non-Bankrupt.**
