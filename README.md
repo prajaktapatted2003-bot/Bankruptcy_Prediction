@@ -220,7 +220,7 @@ This demo shows how the machine learning model can assist analysts and financial
 
 13) Installation
 Clone the repository:
-git clone https://github.com/yourusername/bankruptcy-prediction-ml.git
+git clone  https://github.com/prajaktapatted2003-bot/Bankruptcy_Prediction.git
 Install dependencies:
 
 * pip install -r requirements.txt
